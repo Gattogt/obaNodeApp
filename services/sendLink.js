@@ -6,7 +6,8 @@ const Obrf = require("../models/Obrf");
 async function sendLink (x) {
   const id = x;
   const offerid = id.toString();
-  const url = 'http://localhost:3000/offerletter/' + offerid;
+  const baseUrl = process.env.BASE_DOMAIN_URL;
+  const url = baseUrl + offerid;
 
   const userEmail = await Obrf.findOne({ _id: id })
     .then(function(result){
