@@ -2,9 +2,10 @@ const puppeteer = require('puppeteer');
 const Obrf = require("../models/Obrf");
 
 const savePDF = (x) => {
+    const baseUrl = process.env.BASE_DOMAIN_URL
     const id = x;
     const offerid = id.toString();
-    const url = 'http://localhost:3000/offerletter/' + offerid
+    const url = baseUrl + offerid
     const savePath = './files/offerletterfor-' + offerid + '.pdf'
     async function printPDF() {
         const userEmail = await Obrf.findOne({ _id: id })
