@@ -1,14 +1,14 @@
 {
-  "name": "onboardingtrackingapp",
+  "name": "obanodeapp",
   "version": "1.0.0",
-  "description": "application to track candidate onboarding",
-  "main": "server.js",
+  "description": "oba app built in node",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
   "keywords": [
-    "onboarding"
+    "oba"
   ],
   "author": "David Safran",
   "license": "ISC",
